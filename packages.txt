@@ -1,3 +1,5 @@
 unzip
 fish
 tmux
+curl
+font-manager
