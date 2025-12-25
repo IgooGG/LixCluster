@@ -22,7 +22,22 @@ if dpkg -s sudo >/dev/null 2>&1; then
     fish
     exit
     echo "Done! Changing fish settings..."
-    curl -L https://raw.githubusercontent.com/IgooGG/LixCluster/refs/heads/main/atomic2.omp.json \-o ~/.config/fish/config.fish
+    curl -L https://raw.githubusercontent.com/IgooGG/LixCluster/refs/heads/main/config.fish \-o ~/.config/fish/config.fish
+    echo "Done!"
+    clear
+    echo "Next steps:"
+    echo "  1. Set font to JetBrains Mono NerdFont (It was downloaded by this script)."
+    echo "  2. Restart PC to update default shell. (You can use {sudo systemctl reboot} )."
+    echo "Thats all thanks for using Linux Shell Tools (LixCluster)"
+    echo "  _      _             _           _             "
+    echo " | |    (_)           | |         | |            "
+    echo " | |     ___  __   ___| |_   _ ___| |_ ___ _ __  "
+    echo " | |    | \ \/ /  / __| | | | / __| __/ _ \ '__| "
+    echo " | |____| |>  <  | (__| | |_| \__ \ ||  __/ |    "
+    echo " |______|_/_/\_\  \___|_|\__,_|___/\__\___|_|    "
+    echo "                                                 "
+    echo "                                       By IgooGG "
+    echo "                                                 "
 else
     echo "Sudo is not installed. Please install it and try again!"
 fi
