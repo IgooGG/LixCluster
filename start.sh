@@ -1,5 +1,4 @@
 set -e
-FONT_DIR="$HOME/.local/share/fonts/JetBrainsMono"
 
 if dpkg -s sudo >/dev/null 2>&1; then
     echo "Sudo exists! Installing pkg's."
@@ -13,10 +12,10 @@ if dpkg -s sudo >/dev/null 2>&1; then
     echo "Done! Changing shell for your account..."
     echo "Password may be required!"
     chsh -s /usr/bin/fish
-    echo "Done! Installing font..."
-    mkdir -p ~/.local/share/fonts
-    cp Font/JetBrainsMono/* "$FONT_DIR/"
-    fc-cache -fv
+    #echo "Done! Installing font..."
+    #mkdir -p ~/.local/share/fonts
+    #cp Font/JetBrainsMono/* ~/.local/share/fonts/
+    #fc-cache -fv
     echo "Done. You need to change it manually!"
     echo "Creating fish resources..."
     fish
