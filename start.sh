@@ -1,3 +1,6 @@
+set -e
+FONT_DIR="$HOME/.local/share/fonts/JetBrainsMono"
+
 if dpkg -s sudo >/dev/null 2>&1; then
     echo "Sudo exists! Installing pkg's."
     sudo apt update
@@ -12,6 +15,14 @@ if dpkg -s sudo >/dev/null 2>&1; then
     chsh -s /usr/bin/fish
     echo "Done! Installing font..."
     mkdir -p ~/.local/share/fonts
+    cp Font/JetBrainsMono/* "$FONT_DIR/"
+    fc-cache -fv
+    echo "Done. You need to change it manually!"
+    echo "Creating fish resources..."
+    fish
+    exit
+    echo "Done! Changing fish settings..."
+    curl -L https://raw.githubusercontent.com/IgooGG/LixCluster/refs/heads/main/atomic2.omp.json \-o ~/.config/fish/config.fish
 else
     echo "Sudo is not installed. Please install it and try again!"
 fi
