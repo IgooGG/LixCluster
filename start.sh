@@ -1,5 +1,3 @@
-set -e
-
 if dpkg -s sudo >/dev/null 2>&1; then
     echo "Sudo exists! Installing pkg's."
     sudo apt update
@@ -16,10 +14,6 @@ if dpkg -s sudo >/dev/null 2>&1; then
     #mkdir -p ~/.local/share/fonts
     #cp Font/JetBrainsMono/* ~/.local/share/fonts/
     #fc-cache -fv
-    echo "Done. You need to change it manually!"
-    echo "Creating fish resources..."
-    fish
-    exit
     echo "Done! Changing fish settings..."
     curl -L https://raw.githubusercontent.com/IgooGG/LixCluster/refs/heads/main/config.fish \-o ~/.config/fish/config.fish
     echo "Done!"
