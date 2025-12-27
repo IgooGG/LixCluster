@@ -10,6 +10,7 @@ if dpkg -s sudo >/dev/null 2>&1; then
     echo "Done! Changing shell for your account..."
     echo "Password may be required!"
     chsh -s /usr/bin/fish
+    exec fish
     #echo "Done! Installing font..."
     #mkdir -p ~/.local/share/fonts
     #cp Font/JetBrainsMono/* ~/.local/share/fonts/
@@ -17,7 +18,8 @@ if dpkg -s sudo >/dev/null 2>&1; then
     echo "Done! Changing fish settings..."
     curl -L https://raw.githubusercontent.com/IgooGG/LixCluster/refs/heads/main/config.fish \-o ~/.config/fish/config.fish
     echo "Done!"
-    clear
+    echo " "
+    echo " "
     echo "Next steps:"
     echo "  1. Set font to JetBrains Mono NerdFont (It was downloaded by this script)."
     echo "  2. Restart PC to update default shell. (You can use {sudo systemctl reboot} )."
