@@ -10,12 +10,9 @@ if dpkg -s sudo >/dev/null 2>&1; then
     echo "Done! Changing shell for your account..."
     echo "Password may be required!"
     chsh -s /usr/bin/fish
-    exec fish
-    #echo "Done! Installing font..."
-    #mkdir -p ~/.local/share/fonts
-    #cp Font/JetBrainsMono/* ~/.local/share/fonts/
-    #fc-cache -fv
     echo "Done! Changing fish settings..."
+    mkdir ~/.config/fish
+    touch ~/.config/fish/config.fish
     curl -L https://raw.githubusercontent.com/IgooGG/LixCluster/refs/heads/main/config.fish \-o ~/.config/fish/config.fish
     echo "Done!"
     echo " "
